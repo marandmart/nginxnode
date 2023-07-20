@@ -1,10 +1,10 @@
 # Full Cycle Node/MySQL/NGINX Challenge
 
-Challenge for the Full Cycle course to build a docker-compose file that creates and reverse proxy and connects a nodeJS application container to a mysql server
+Challenge for the Full Cycle course to build a docker-compose file that creates and reverse proxy and connects a nodeJS application container to a MySQL server.
 
 # How to run
 
-* Install dependencies inside the node folder
+* Install dependencies inside the node folder.
 * Run docker-compose.yml file using the command: 
 
 ```
@@ -24,7 +24,7 @@ docker-compose up -d --build
     mysql -u root -p
     ```
     
-    Inside the mysql CLI:
+    Inside the MySQL CLI:
     ```
     use people;
     select * from people;
