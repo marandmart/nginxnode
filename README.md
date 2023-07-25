@@ -4,8 +4,7 @@ Challenge for the Full Cycle course to build a docker-compose file that creates 
 
 # How to run
 
-* Install dependencies inside the node folder.
-* Run docker-compose.yml file using the command: 
+- Use docker-compose.yml file with the command:
 
 ```
 docker-compose up -d --build
@@ -13,19 +12,21 @@ docker-compose up -d --build
 
 # How to use
 
-* Go to http://localhost:8080 in your prefered web browser.
-* To add names to the database go to url http://localhost:8080/add/:name. Replace :name with the name you want to add.
-* To see names inside the database, after running the docker-compose up command, run commands:
- 
-    ```    
-    docker exec -it mysql bash
-    ```
-    ```
-    mysql -u root -p
-    ```
-    
-    Inside the MySQL CLI:
-    ```
-    use people;
-    select * from people;
-    ``` 
+- Go to http://localhost:3000 in your prefered web browser.
+- To add names to the database go to url http://localhost:3000/add/:name. Replace :name with the name you want to add.
+- To see names inside the database, after running the docker-compose up command, run commands:
+
+  ```
+  docker exec -it mysql bash
+  ```
+
+  ```
+  mysql -u root -p
+  ```
+
+  Inside the MySQL CLI:
+
+  ```
+  use people;
+  select * from people;
+  ```

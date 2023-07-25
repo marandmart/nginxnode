@@ -14,11 +14,13 @@ services:
       - ./mysql:/var/lib/mysql
 
   node:
-    image: node
     build:
       context: ./node
     container_name: node
     restart: always
+    volumes:
+      - ./node:/app
+      - /app/node_modules
     depends_on:
       - mysql
     environment:
@@ -27,14 +29,14 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_DATABASE: people
     ports:
-      - "8080:8080"
+      - "3000:3000"
 
   nginx:
     image: nginx
     container_name: nginx
     restart: always
     ports:
-      - "80:80"
+      - "8080:8080"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
